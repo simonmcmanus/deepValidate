@@ -39,13 +39,13 @@ var validate = module.exports = function(name, obj, obj1, iterator) {
     } else {
       if (typeof obj1[item] ===  'undefined') {
         success = false;
-        failure  = 'Expected object key `' + item + '` to exist.';
+        failure  = 'Expected object key `' + item + '` to exist. (' + name + ')';
       }
       else if ((typeof obj1[item]) !== (typeof obj[item])) {
         // then confirm the values are of the same type
         success = false;
         failure = 'Fail, expected item:' + item + '  of type ' +
-          (typeof  obj[item]) + ' to equal ' + (typeof obj1[item])
+          (typeof  obj[item]) + ' to equal ' + (typeof obj1[item]) +  (' + name + ')'
       }
       _iterator(failure, item, obj, obj1);
     }
