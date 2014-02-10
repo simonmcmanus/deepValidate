@@ -1,0 +1,16 @@
+{
+  "name": "deepValidate",
+  "version": "0.0.0",
+  "description": "Check that two objects have the same structure, same keys and the values are of the same type.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --watch --reporter spec",
+    "devtest": "mocha --reporter spec"
+  },
+  "author": "Simon McManus",
+  "license": "BSD-2-Clause",
+  "dependencies": {}
+}
