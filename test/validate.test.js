@@ -219,12 +219,13 @@ describe('When the deep validate function is included', function() {
         }
 
         iterator = sinon.spy();
+
         validate('name', obj1, obj2, iterator);
         done();
       })
       describe('when called', function() {
         it('should pass the iterator the reasons for failure.', function() {
-          should(iterator.calledWith('name', 'Expected object key `key` to exist.', 'value', undefined));
+          should(iterator.calledWith(obj1, obj2, 'key', 'Expected object key `key` to exist.', 'name')).equal(true);
         });
       });
     });
@@ -261,8 +262,8 @@ describe('When the deep validate function is included', function() {
         it('iterator should get called once as only one key/value pair is compared', function() {
           should(iterator.callCount).equal(1);
         });
-        it('should pass in the object path of the keys on failure and success.', function() {
-          iterator.calledWith('starting.key.bacon', false, 'cat',  obj1.key, obj2.key);
+        it('should pass in the object path of the keys on failure and success', function() {
+          should(iterator.calledWith(obj1.key.bacon, obj2.key.bacon, 'cat', false, 'starting.key.bacon')).equal(true);
         });
       });
     });
@@ -300,7 +301,7 @@ describe('When the deep validate function is included', function() {
           should(iterator.callCount).equal(1);
         });
         it('should pass in the object path of the keys on failure and success.', function() {
-          iterator.calledWith('starting.key[0]', false, 'dog',  obj1.key, obj2.key);
+          should(iterator.calledWithExactly(obj1.key[0], obj2.key[0], 'dog', false, 'starting.key[0]')).equal(true);
         });
       });
     });

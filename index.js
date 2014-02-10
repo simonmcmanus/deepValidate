@@ -7,9 +7,9 @@
  * @return {Boolean}          Do the two objects have the same structure and types?
  */
 var validate = module.exports = function(name, obj, obj1, iterator) {
-  var _iterator = function(text, key, obj, obj1) {
+  var _iterator = function(failure, key, obj, obj1) {
     if(iterator) {
-        iterator(name, text, key, obj, obj1);
+        iterator(obj, obj1, key, failure, name);
     }
   }
   var success = true; // if not true should store the failure reason.
