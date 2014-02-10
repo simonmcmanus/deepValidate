@@ -45,7 +45,7 @@ var validate = module.exports = function(name, obj, obj1, iterator) {
         // then confirm the values are of the same type
         success = false;
         failure = 'Fail, expected item:' + item + '  of type ' +
-          (typeof  obj[item]) + ' to equal ' + (typeof obj1[item]) +  (' + name + ')'
+          (typeof  obj[item]) + ' to equal ' + (typeof obj1[item]) + '(' + name + ')'
       }
       _iterator(failure, item, obj, obj1);
     }
