@@ -1,5 +1,5 @@
 {
-  "name": "deepValidate",
+  "name": "deepvalidate",
   "version": "0.0.1",
   "description": "Check that two objects have the same structure, same keys and the values are of the same type.",
   "main": "index.js",
