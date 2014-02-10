@@ -12,5 +12,9 @@
   },
   "author": "Simon McManus",
   "license": "BSD-2-Clause",
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonmcmanus/deepValidate"
+  }
 }
