@@ -1,5 +1,7 @@
 #Deep Validate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/simonmcmanus/deepValidate.svg)](https://greenkeeper.io/)
+
 Given two objects, check that the data given in the first object is present in the second object.
 
 Also checks that the types of the two values are the same.
